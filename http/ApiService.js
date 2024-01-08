@@ -14,7 +14,7 @@ class ApiService{
         const response = await this.api.get(`/${endpoint}`)
         return response.data
     }
-    async getById(endpoint){
+    async getById(endpoint,id){
         const response = await this.api.get(`/${endpoint}/${id}`)
         return response.data
     }

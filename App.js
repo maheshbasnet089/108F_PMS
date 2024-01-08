@@ -5,6 +5,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer'
 import Home from './screens/Home';
 import About from './screens/About';
 import CustomDrawer from './CustomDrawer';
+import ProductDetail from './screens/ProductDetail';
 
 const {Navigator,Screen} = createDrawerNavigator()
 
@@ -27,6 +28,7 @@ export default function App() {
       >
         <Screen name='home' component={Home}  />
         <Screen name='about' component={About} />
+        <Screen name="details" component={ProductDetail} options={{drawerItemStyle : {height : 0}}} />
      
       </Navigator>
     </NavigationContainer>
