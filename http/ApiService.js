@@ -18,6 +18,11 @@ class ApiService{
         const response = await this.api.get(`/${endpoint}/${id}`)
         return response.data
     }
+    async add(endpoint,data){
+        const response = await this.api.post(`/${endpoint}`,data)
+        
+        return {data : response.data,status : response.status}
+    }
 
 }
 
