@@ -7,6 +7,7 @@ import About from './screens/About';
 import CustomDrawer from './CustomDrawer';
 import ProductDetail from './screens/ProductDetail';
 import ProductForm from './screens/ProductForm';
+import EditProductForm from './screens/EditProductForm';
 
 const {Navigator,Screen} = createDrawerNavigator()
 
@@ -30,7 +31,8 @@ export default function App() {
         <Screen name='home' component={Home}  />
         <Screen name='about' component={About} />
         <Screen name="details" component={ProductDetail} options={{drawerItemStyle : {height : 0}}} />
-        <Screen name='productForm' component={ProductForm}  options={{drawerItemStyle : {height : 0}}}/>
+        <Screen name='productForm' component={ProductForm}  options={{drawerItemStyle : {height : 0},title : "Add"}}/>
+        <Screen name='editProductForm' component={EditProductForm}  options={{drawerItemStyle : {height : 0},title : "Edit"}}/>
       </Navigator>
     </NavigationContainer>
   );

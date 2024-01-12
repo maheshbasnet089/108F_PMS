@@ -20,8 +20,15 @@ class ApiService{
     }
     async add(endpoint,data){
         const response = await this.api.post(`/${endpoint}`,data)
-        
         return {data : response.data,status : response.status}
+    }
+    async delete(endpoint,id){
+        const response = await this.api.delete(`/${endpoint}/${id}`)
+        return {status : response.status}
+    }
+    async edit(endpoint,id,data){
+        const response = await this.api.put(`/${endpoint}/${id}`,data)
+        return {status: response.status,data : response.data }
     }
 
 }
